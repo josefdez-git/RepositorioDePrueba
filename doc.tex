@@ -141,12 +141,19 @@ and rotates in counterclockwise sense,
 which makes its position
 
 \begin{multline*}
+% The use of spacing here goes aggainst the separation of content and formatting
+% but the output didn't look right otherwise.
     α(θ) = \\
-    c(θ) + \qty\Big(\cos(\frac{3π}{2}-θ), \sin(\frac{3π}{2}-θ)) =
-    c(θ) + \qty\Big(\sin(2π-θ), \cos(\frac{π}{2}-θ)) = \\
-    c(θ) + \qty\Big(-\sin θ, \cos(\frac{π}{2}-θ)) =
-    c(θ) + \qty\Big(-\sin θ, -\cos(θ)) = \\
-    \qty\Big(θ, 1) + \qty\Big(-\sin θ, -\cos θ) =
+    \begin{split}
+        c(θ) + \qty\Big(\cos(\frac{3π}{2}-θ), \sin(\frac{3π}{2}-θ)) =
+        & \qty\Big(\text{using } \cos(ρ - \frac{π}{2}) = \ \; \sin ρ) = \\
+        c(θ) + \qty\Big(\sin(2π-θ), \cos(\frac{π}{2}-θ)) =
+        & \qty\Big(\text{using } \sin\Big(-ρ\Big) \ \,  = -\sin ρ) = \\
+        c(θ) + \qty\Big(-\sin θ, \cos(\frac{π}{2}-θ)) =
+        & \qty\Big(\text{using } \cos(\frac{π}{2}-ρ) = -\cos ρ) = \\
+        c(θ) + \qty\Big(-\sin θ, -\cos(θ)) =
+        & \qty\Big(θ, 1) + \qty\Big(-\sin θ, -\cos θ) = \\
+    \end{split} \\
     \qty\Big(θ - \sin θ, 1 - \cos θ).\footnotemark
 \end{multline*}
 
